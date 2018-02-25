@@ -1,13 +1,18 @@
 {% extends "base_generic.html" %}
 
-<!--Add additional CSS in static file -->
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' }">
+{% block title %}<title>My Test side</title>{% endblock %}
 
 {% block content %}
 <h1>Local Libarary Home</h1>
 
     <p>Welcome to <em>LocalLibarary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+
+
+<div>
+    {% load static %}
+    <img src="{% static "img/basic-django.png" %}" alt="My image" style="width:555px;height:540px;"/>
+    </div>  
+</div>
 
 <h2>Dynamic content</h2>
 <p>The library has the following record counts:</p>
@@ -16,5 +21,8 @@
     <li><strong>Copies: </strong>{{ num_instances }}</li>
     <li><strong>Books: </strong>{{ num_instances_available }}</li>
     <li><strong>Books: </strong>{{ num_books }}</li>
+    <li><strong>Books: </strong>{{ num_books }}</li>
+    <li><strong>Generes: </strong>{{ num_count_generes }}</li>
+    <li><strong>BookContains:</strong>{{ num_booksCountain}}</li>
 </ul>
 {% endblock %}
